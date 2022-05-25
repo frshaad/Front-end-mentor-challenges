@@ -1,0 +1,124 @@
+@use 'index' as *;
+
+.container {
+	width: 400px;
+	height: 400px;
+	padding: rem(30);
+	max-height: 500px;
+	max-width: 90%;
+	margin: auto auto;
+	background: $dark-blue;
+	border-radius: rem(25);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-200px, -200px);
+}
+
+// Rate Section
+
+.rating-card {
+	&__logo {
+		background: lighten($dark-blue, 5);
+		padding: rem(15);
+		border-radius: 50%;
+	}
+
+	.rating {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin: rem(25) auto;
+
+		label {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background: lighten($dark-blue, 5);
+			padding: rem(15);
+			border-radius: 50%;
+			color: $medium-grey;
+			width: rem(50);
+			height: rem(50);
+			cursor: pointer;
+
+			&:hover {
+				background: $orange;
+				box-shadow: 0 1px 1px 1px rgba(darken($dark-blue, 5), 0.2);
+				color: $white;
+			}
+
+			&:active {
+				background: $light-grey;
+				box-shadow: 0 1px 1px 1px rgba(darken($dark-blue, 5), 0.2);
+				color: $white;
+			}
+		}
+
+		input {
+			display: none;
+		}
+	}
+
+	button {
+		width: 100%;
+		padding: rem(11);
+		border: none;
+		border-radius: rem(25);
+		font-size: rem(14);
+		text-transform: uppercase;
+		letter-spacing: rem(2);
+		font-family: 700;
+		background-color: $orange;
+		color: $white;
+		cursor: pointer;
+		box-shadow: 0 1px 1px 1px rgba(darken($dark-blue, 5), 0.2);
+
+		&:hover {
+			background: $white;
+			box-shadow: 0 1px 1px 1px rgba(darken($dark-blue, 5), 0.2);
+			color: $orange;
+		}
+	}
+}
+
+.title {
+	font-size: rem(26);
+}
+
+.desc {
+	line-height: 1.6;
+	color: $medium-grey;
+}
+
+// Thank You Section
+
+.thank-card {
+	display: flex;
+	display: none;
+	flex-direction: column;
+	align-items: center;
+
+	img {
+		margin: 0 auto;
+		padding: rem(10);
+	}
+
+	h4 {
+		background: lighten($dark-blue, 5);
+		color: darken($orange, 10);
+		padding: rem(8) rem(15);
+		border-radius: rem(30);
+		margin: 0;
+		margin-top: rem(20);
+	}
+
+	h1 {
+		margin: 0;
+	}
+
+	.desc {
+		text-align: center;
+		margin: 0;
+	}
+}
