@@ -1,0 +1,35 @@
+@use 'index' as *;
+
+.container {
+	width: 400px;
+	max-width: 90%;
+	margin: 0 auto;
+	background-color: $white;
+	padding: rem(20);
+	border-radius: rem(20);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+	img {
+		width: 100%;
+		height: auto;
+		border-radius: rem(20);
+	}
+
+	h1 {
+		width: 90%;
+		margin: rem(25) auto;
+		font-size: rem(25);
+		text-align: center;
+	}
+
+	p {
+		width: 80%;
+		margin: rem(25) auto;
+		font-size: rem(18);
+		text-align: center;
+		color: $grayish-blue;
+	}
+}
