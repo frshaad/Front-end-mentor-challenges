@@ -1,0 +1,22 @@
+@use 'functions' as *;
+@use '_colors' as *;
+
+html {
+	font-size: 100%;
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-size: rem(18);
+	font-family: 'Outfit', sans-serif;
+	background: $main-bg;
+	color: $white;
+}
