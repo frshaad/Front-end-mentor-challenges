@@ -18,6 +18,7 @@
 // Rate Section
 
 .rating-card {
+	display: block;
 	&__logo {
 		background: lighten($dark-blue, 5);
 		padding: rem(15);
@@ -47,12 +48,12 @@
 				box-shadow: 0 1px 1px 1px rgba(darken($dark-blue, 5), 0.2);
 				color: $white;
 			}
+		}
 
-			&:active {
-				background: $light-grey;
-				box-shadow: 0 1px 1px 1px rgba(darken($dark-blue, 5), 0.2);
-				color: $white;
-			}
+		.active-rating {
+			background: $light-grey;
+			box-shadow: 0 1px 1px 1px rgba(darken($dark-blue, 5), 0.2);
+			color: $white;
 		}
 
 		input {
@@ -75,7 +76,7 @@
 		box-shadow: 0 1px 1px 1px rgba(darken($dark-blue, 5), 0.2);
 
 		&:hover {
-			background: $white;
+			background-color: $white;
 			box-shadow: 0 1px 1px 1px rgba(darken($dark-blue, 5), 0.2);
 			color: $orange;
 		}
@@ -94,7 +95,6 @@
 // Thank You Section
 
 .thank-card {
-	display: flex;
 	display: none;
 	flex-direction: column;
 	align-items: center;
@@ -104,7 +104,7 @@
 		padding: rem(10);
 	}
 
-	h4 {
+	.user-rating {
 		background: lighten($dark-blue, 5);
 		color: darken($orange, 10);
 		padding: rem(8) rem(15);
