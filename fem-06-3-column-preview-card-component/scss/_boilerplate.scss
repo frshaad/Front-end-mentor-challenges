@@ -1,0 +1,23 @@
+@use 'functions' as *;
+@use '_colors' as *;
+
+html {
+	font-size: 100%;
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-size: rem(15);
+	font-family: 'Big Shoulders Display', cursive;
+	font-family: 'Lexend Deca', sans-serif;
+	background: $light-gray;
+	color: $paragraph;
+}
