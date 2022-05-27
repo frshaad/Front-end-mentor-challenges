@@ -1,0 +1,75 @@
+@use 'index' as *;
+
+body::after {
+	content: '';
+	background-image: url(../images/bg-pattern-top.svg);
+	background-size: contain;
+}
+
+.card {
+	width: rem(400);
+	max-width: 90%;
+	margin: 0 auto;
+	border-radius: rem(15);
+	background-color: #fff;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+	.top {
+		position: relative;
+		text-align: center;
+		padding-bottom: rem(40);
+		border-bottom: rem(2) solid rgba($dark-gray, 0.2);
+
+		.hero-bg {
+			border-radius: rem(15) rem(15) 0 0;
+			width: 100%;
+			height: auto;
+		}
+
+		.avatar {
+			border-radius: 50%;
+			border: rem(5) solid #fff;
+			position: relative;
+			top: 70%;
+			transform: translateY(-50%);
+			margin-bottom: rem(-30);
+		}
+
+		.name {
+			margin-bottom: rem(10);
+
+			.age {
+				color: $dark-gray;
+				font-weight: 400;
+				margin-left: rem(5);
+			}
+		}
+
+		.location {
+			color: $dark-gray;
+			font-size: rem(16);
+		}
+	}
+
+	.bottom {
+		display: flex;
+		justify-content: space-between;
+		padding: rem(25) rem(50);
+
+		.stat {
+			text-align: center;
+			.number {
+				margin-bottom: rem(5);
+			}
+			.title {
+				color: $dark-gray;
+				font-size: rem(10);
+				font-weight: 700;
+				letter-spacing: rem(2);
+			}
+		}
+	}
+}
