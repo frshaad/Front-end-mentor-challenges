@@ -1,0 +1,13 @@
+@use 'index' as *;
+
+.container {
+	width: rem(400);
+	max-width: 90%;
+	margin: 0 auto;
+	border-radius: rem(15);
+	background-color: #fff;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
