@@ -1,9 +1,50 @@
 @use 'index' as *;
 
+body::before {
+	content: '';
+	background-image: url(../images/bg-pattern-bottom.svg);
+	background-size: contain;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	transform: scale(1.2);
+	z-index: -5;
+}
+
 body::after {
 	content: '';
 	background-image: url(../images/bg-pattern-top.svg);
 	background-size: contain;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	z-index: -5;
+}
+
+@include breakpoint(desktop) {
+	body::before {
+		bottom: -60%;
+		left: 65%;
+	}
+
+	body::after {
+		top: -50%;
+		left: 0;
+	}
+}
+
+@include breakpoint-down(mobile) {
+	body::before {
+		bottom: -70%;
+		left: 50%;
+	}
+
+	body::after {
+		top: -35%;
+		left: -50%;
+	}
 }
 
 .card {
