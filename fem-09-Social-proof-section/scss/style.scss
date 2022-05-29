@@ -2,13 +2,130 @@
 
 .container {
 	margin: 0 auto;
-	padding-bottom: rem(50);
-	border-radius: rem(25);
-	background-color: #fff;
 
 	@include breakpoint(desktop) {
+		max-width: rem(1000);
+		padding: rem(50);
 	}
 
 	@include breakpoint-down(mobile) {
+		max-width: 90%;
+		margin: rem(25) auto;
+	}
+
+	.top {
+		@include breakpoint(desktop) {
+			display: flex;
+			justify-content: space-between;
+			margin-bottom: rem(50);
+		}
+
+		@include breakpoint-down(mobile) {
+			margin-bottom: rem(50);
+		}
+
+		.desc {
+			@include breakpoint(desktop) {
+				width: 50%;
+				padding-right: rem(10);
+			}
+
+			@include breakpoint-down(mobile) {
+				text-align: center;
+			}
+
+			&__title {
+				margin-bottom: rem(25);
+				line-height: 1;
+
+				@include breakpoint(desktop) {
+					font-size: rem(45);
+				}
+
+				@include breakpoint-down(mobile) {
+					text-align: center;
+					width: 70%;
+					margin: 0 auto;
+					margin-bottom: rem(20);
+				}
+			}
+
+			&__paragraph {
+				line-height: 1.5;
+				color: $dark-grayish-magenta;
+
+				@include breakpoint-down(mobile) {
+					text-align: center;
+					margin-bottom: rem(25);
+				}
+			}
+		}
+
+		.ratings {
+			@include breakpoint-down(mobile) {
+				text-align: center;
+			}
+
+			.rating {
+				background-color: $light-grayish-magenta;
+				margin-bottom: rem(15);
+
+				@include breakpoint(desktop) {
+					display: flex;
+					align-items: center;
+					padding: rem(20) rem(30);
+					border-radius: rem(10);
+				}
+
+				@include breakpoint-down(mobile) {
+					padding: rem(10) rem(15);
+				}
+
+				&__stars {
+					@include breakpoint(desktop) {
+						padding-right: rem(30);
+					}
+
+					&__star {
+						transform: scale(0.8);
+					}
+				}
+
+				&__source {
+				}
+			}
+		}
+	}
+
+	.bottom {
+		@include breakpoint(desktop) {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		.review {
+			background-color: $very-dark-magenta;
+			padding: rem(20);
+			color: $white;
+
+			@include breakpoint(desktop) {
+				flex-basis: 31%;
+			}
+
+			&__person {
+				display: flex;
+
+				&__avatar {
+					border-radius: 50%;
+				}
+
+				&__name {
+				}
+				&__verified {
+				}
+			}
+			&__opinion {
+			}
+		}
 	}
 }
