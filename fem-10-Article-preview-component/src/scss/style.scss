@@ -1,0 +1,66 @@
+@use 'index' as *;
+
+.container {
+	border-radius: rem(15);
+	background-color: #fff;
+
+	@include breakpoint(desktop) {
+		display: flex;
+		max-width: rem(900);
+		margin: 0 auto;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	@include breakpoint-down(mobile) {
+		width: 90%;
+		margin: rem(30) auto;
+	}
+
+	.hero {
+		width: 100%;
+		height: auto;
+
+		@include breakpoint(desktop) {
+			border-radius: rem(15) 0 0 rem(15);
+		}
+		@include breakpoint-down(mobile) {
+			border-radius: rem(15) rem(15) 0 0;
+			margin-bottom: rem(40);
+		}
+	}
+	.content {
+		line-height: 1.5;
+		@include breakpoint-down(mobile) {
+			width: 80%;
+			margin: 0 auto;
+		}
+		&__title {
+			@include breakpoint-down(mobile) {
+				margin-bottom: rem(15);
+			}
+		}
+		&__desc {
+			line-height: 1.7;
+			color: $dark-blue;
+		}
+		&__author {
+			display: flex;
+			justify-content: space-between;
+			&__avatar {
+				border-radius: 50%;
+				width: rem(50);
+				height: auto;
+			}
+			&__info {
+				&__name {
+				}
+				&__date {
+				}
+			}
+			&__share {
+			}
+		}
+	}
+}
