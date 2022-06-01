@@ -60,13 +60,6 @@ function browsersyncReload(cb) {
 	cb();
 }
 
-// function watchTask() {
-// 	watch('src/*.html', htmlTask);
-// 	watch('src/scss/**/*.scss', scssTask);
-// 	watch('src/js/**/*.js', jsTask);
-// 	watch('src/images/**/*.{jpg,png}', imgTask);
-// 	watch('dist/images/optimized/*.{jpg,png}', webpTask);
-// }
 function watchTask() {
 	watch('*.html', browsersyncReload);
 	watch('src/scss/**/*.scss', series(scssTask, browsersyncReload));
@@ -76,13 +69,4 @@ function watchTask() {
 	watch('dist/images/optimized/*.{jpg,png}', series(webpTask, browsersyncReload));
 }
 
-exports.default = series(
-	// htmlTask,
-	scssTask,
-	jsTask,
-	svgCopy,
-	imgTask,
-	webpTask,
-	browsersyncServe,
-	watchTask
-);
+exports.default = series(scssTask, jsTask, svgCopy, imgTask, webpTask, browsersyncServe, watchTask);

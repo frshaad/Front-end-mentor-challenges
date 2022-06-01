@@ -2,64 +2,127 @@
 
 .container {
 	border-radius: rem(15);
+	box-shadow: rem(2) rem(2) rem(10) rem(2) rgba($dark-grayish-blue, 0.1);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	margin: 0 auto;
+
 	background-color: #fff;
 
 	@include breakpoint(desktop) {
 		display: flex;
-		max-width: rem(900);
-		margin: 0 auto;
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
+		justify-content: space-between;
+		max-width: rem(1000);
+		max-width: 90%;
 	}
+
 	@include breakpoint-down(mobile) {
 		width: 90%;
-		margin: rem(30) auto;
+		margin: 0 auto;
+		padding-bottom: rem(15);
 	}
 
-	.hero {
-		width: 100%;
-		height: auto;
-
+	.hero-box {
 		@include breakpoint(desktop) {
-			border-radius: rem(15) 0 0 rem(15);
+			overflow: hidden;
+			max-width: 60%;
 		}
-		@include breakpoint-down(mobile) {
-			border-radius: rem(15) rem(15) 0 0;
-			margin-bottom: rem(40);
+
+		.hero {
+			@include breakpoint(desktop) {
+				height: 100%;
+				width: auto;
+				max-width: rem(400);
+				border-radius: rem(15) 0 0 rem(15);
+			}
+
+			@include breakpoint-down(mobile) {
+				width: 100%;
+				height: auto;
+				border-radius: rem(15) rem(15) 0 0;
+				margin-bottom: rem(40);
+			}
 		}
 	}
+
 	.content {
 		line-height: 1.5;
+
+		@include breakpoint(desktop) {
+			padding: rem(40);
+			width: rem(400);
+			min-width: 40%;
+			max-width: 60%;
+		}
+
 		@include breakpoint-down(mobile) {
 			width: 80%;
 			margin: 0 auto;
 		}
+
 		&__title {
+			@include breakpoint(desktop) {
+				margin-bottom: rem(25);
+			}
 			@include breakpoint-down(mobile) {
 				margin-bottom: rem(15);
 			}
 		}
+
 		&__desc {
 			line-height: 1.7;
+
 			color: $dark-blue;
+
+			@include breakpoint(desktop) {
+				margin-bottom: rem(25);
+			}
+			@include breakpoint-down(mobile) {
+				margin-bottom: rem(35);
+			}
 		}
+
 		&__author {
 			display: flex;
 			justify-content: space-between;
+			align-items: center;
+
+			@include breakpoint-down(mobile) {
+				margin-bottom: rem(15);
+			}
+
 			&__avatar {
 				border-radius: 50%;
-				width: rem(50);
+				max-width: rem(50);
 				height: auto;
 			}
+
 			&__info {
+				position: relative;
+				left: rem(-40);
+
 				&__name {
 				}
 				&__date {
 				}
 			}
+
 			&__share {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				padding: rem(10);
+				border-radius: 50%;
+
+				background-color: $light-grayish-blue;
+				cursor: pointer;
+
+				&--svg {
+					width: rem(15);
+					height: rem(15);
+				}
 			}
 		}
 	}
