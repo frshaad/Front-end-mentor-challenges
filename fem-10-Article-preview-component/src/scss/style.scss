@@ -168,7 +168,7 @@
 
 				.content__author__shared--desktop {
 					@include breakpoint-down(mobile) {
-						display: none;
+						display: none !important;
 					}
 
 					@include breakpoint(desktop) {
@@ -210,20 +210,5 @@
 				}
 			}
 		}
-
-		// When click the share button
-		// .shared {
-		// 	.content__author__avatar {
-		// 		@include breakpoint-down(mobile) {
-		// 			display: none;
-		// 		}
-		// 	}
-
-		// 	.content__author__info {
-		// 		@include breakpoint-down(mobile) {
-		// 			display: none;
-		// 		}
-		// 	}
-		// }
 	}
 }
