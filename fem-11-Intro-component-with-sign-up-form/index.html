@@ -6,13 +6,42 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
 		<title>Frontend Mentor | Intro component with sign up form</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
 		<link rel="stylesheet" href="./dist/style.css" />
 		<script defer src="./dist/script.js"></script>
 	</head>
 	<body>
-		Learn to code by watching others See how experienced developers solve problems in real-time.
-		Watching scripted tutorials is great, but understanding how developers think is invaluable. Try
-		it free 7 days then $20/mo. thereafter First Name Last Name Email Address Password Claim your
-		free trial By clicking the button, you are agreeing to our Terms and Services
+		<div class="container">
+			<div class="content">
+				<h1 class="content__title">Learn to code by watching others</h1>
+				<p class="content__desc">
+					See how experienced developers solve problems in real-time. Watching scripted tutorials is
+					great, but understanding how developers think is invaluable.
+				</p>
+			</div>
+
+			<div class="interactive">
+				<div class="interactive__try-free">
+					<span class="bold">Try it free 7 days</span> then $20/mo. thereafter
+				</div>
+				<form action="#" class="interactive__signup">
+					<input type="text" placeholder="First Name" id="fName" required />
+					<p class="error"><i> First Name cannot be empty</i></p>
+					<input type="text" placeholder="Last Name" id="lName" required />
+					<input type="email" placeholder="Email Address" id="email" required />
+					<input type="password" placeholder="Password" id="password" required />
+					<button type="submit" class="interactive__signup__submit">Claim your free trial</button>
+					<p class="interactive__signup__terms">
+						By clicking the button, you are agreeing to our
+						<a href="#" class="red"> Terms and Services</a>
+					</p>
+				</form>
+			</div>
+		</div>
 	</body>
 </html>

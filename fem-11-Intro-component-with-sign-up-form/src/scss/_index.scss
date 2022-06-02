@@ -1,8 +1,8 @@
-// @forward 'colors';
-// @forward 'functions';
-// @forward 'mixins';
-// @forward 'boilerplate';
-// @forward 'breakpoint';
-// @forward 'tagNames';
-@forward 'util';
-@forward 'components';
+@forward 'util/colors';
+@forward 'util/functions';
+@forward 'util/mixins';
+@forward 'util/boilerplate';
+@forward 'util/breakpoint';
+@forward 'util/tagNames';
+// @forward 'util';
+// @forward 'components';
