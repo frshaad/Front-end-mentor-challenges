@@ -13,7 +13,7 @@
 			rel="stylesheet"
 		/>
 		<link rel="stylesheet" href="./dist/style.css" />
-		<script defer src="./dist/script.js"></script>
+		<script defer src="./dist/all.js"></script>
 	</head>
 	<body>
 		<div class="container">
@@ -30,11 +30,27 @@
 					<span class="bold">Try it free 7 days</span> then $20/mo. thereafter
 				</div>
 				<form action="#" class="interactive__signup">
-					<input type="text" placeholder="First Name" id="fName" required />
-					<p class="error"><i> First Name cannot be empty</i></p>
-					<input type="text" placeholder="Last Name" id="lName" required />
-					<input type="email" placeholder="Email Address" id="email" required />
-					<input type="password" placeholder="Password" id="password" required />
+					<div class="input__holder">
+						<input type="text" placeholder="First Name" id="fName" required />
+						<img src="./dist/images/icon-error.svg" alt="" class="error__mark" />
+						<p class="error"><i>First Name cannot be empty</i></p>
+					</div>
+					<div class="input__holder">
+						<input type="text" placeholder="Last Name" id="lName" required />
+						<img src="./dist/images/icon-error.svg" alt="" class="error__mark" />
+						<p class="error"><i>Last Name cannot be empty</i></p>
+					</div>
+					<div class="input__holder">
+						<input type="email" placeholder="Email Address" id="email" required />
+						<img src="./dist/images/icon-error.svg" alt="" class="error__mark" />
+						<p class="error"><i>Looks like this is not an email</i></p>
+					</div>
+					<div class="input__holder">
+						<input type="password" placeholder="Password" id="password" required />
+						<img src="./dist/images/icon-error.svg" alt="" class="error__mark" />
+						<p class="error"><i>Password cannot be empty</i></p>
+					</div>
+
 					<button type="submit" class="interactive__signup__submit">Claim your free trial</button>
 					<p class="interactive__signup__terms">
 						By clicking the button, you are agreeing to our
