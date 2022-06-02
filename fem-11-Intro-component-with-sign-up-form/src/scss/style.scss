@@ -79,6 +79,10 @@
 				font-family: 'Poppins', sans-serif;
 				font-weight: 600;
 				font-size: rem(12);
+
+				// &:invalid {
+				// 	border: rem(2) solid $red;
+				// }
 			}
 
 			.input__holder {
@@ -106,6 +110,10 @@
 					text-align: right;
 					transition: 0.2s;
 				}
+
+				// .fname-error {
+				// 	display: block;
+				// }
 			}
 
 			&__submit {
