@@ -3,12 +3,7 @@ const shareBtnSvg = document.querySelector('.content__author__btn--svg');
 const desktopToolTip = document.querySelector('.content__author__shared--desktop');
 const mobileToolTip = document.querySelector('.content__author__shared--mobile');
 
-// shareBtn.addEventListener('click', () => {
-// 	desktopToolTip.style.display = 'flex';
-// 	mobileToolTip.style.display = 'flex';
-// });
-
-document.body.addEventListener('click', e => {
+window.addEventListener('click', e => {
 	if (
 		e.target.classList.contains('content__author__btn') ||
 		e.target.classList.contains('content__author__btn--svg')

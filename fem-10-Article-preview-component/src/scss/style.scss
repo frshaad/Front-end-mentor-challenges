@@ -105,7 +105,7 @@
 
 			&__info {
 				position: relative;
-				left: rem(-40);
+				left: -10%;
 
 				@include breakpoint-down(mobile) {
 					left: rem(-20);
