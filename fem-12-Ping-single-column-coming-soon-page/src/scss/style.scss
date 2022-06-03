@@ -11,10 +11,6 @@
 		margin: rem(80) auto;
 		max-width: rem(700);
 		display: flex;
-		// position: absolute;
-		// top: 50%;
-		// left: 50%;
-		// transform: translate(-50%, -50%);
 		flex-direction: column;
 		align-items: center;
 	}
@@ -29,6 +25,10 @@
 		font-weight: 300;
 		font-size: rem(25);
 		color: $gray;
+
+		@include breakpoint(desktop) {
+			font-size: rem(40);
+		}
 
 		.bold {
 			font-weight: 700;
@@ -65,9 +65,14 @@
 				width: 100%;
 				padding: rem(15) rem(30);
 				margin-bottom: rem(10);
-				border: rem(2) solid $pale-blue;
+				border: rem(1) solid rgba($gray, 0.4);
 				border-radius: rem(40);
 				color: $very-dark-blue;
+
+				&::placeholder {
+					font-family: 'Libre Franklin', sans-serif;
+					color: $gray;
+				}
 			}
 
 			.error {
