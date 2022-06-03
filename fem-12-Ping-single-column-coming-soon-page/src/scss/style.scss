@@ -1,32 +1,154 @@
 @use 'index' as *;
 
 .container {
+	margin: rem(80) auto;
+	width: 90%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	@include breakpoint(desktop) {
+		margin: rem(80) auto;
+		max-width: rem(700);
+		display: flex;
+		// position: absolute;
+		// top: 50%;
+		// left: 50%;
+		// transform: translate(-50%, -50%);
+		flex-direction: column;
+		align-items: center;
+	}
+
 	.logo {
+		max-width: rem(70);
+		margin-bottom: rem(40);
 	}
+
 	.title {
+		margin-bottom: rem(20);
+		font-weight: 300;
+		font-size: rem(25);
+		color: $gray;
+
+		.bold {
+			font-weight: 700;
+			color: $very-dark-blue;
+		}
 	}
+
 	.sub-title {
+		margin-bottom: rem(25);
+		font-size: rem(15);
+		color: $very-dark-blue;
 	}
+
 	.form {
-		#email {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+
+		@include breakpoint(desktop) {
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: baseline;
 		}
-		.error {
+
+		.input-div {
+			width: 80%;
+
+			@include breakpoint(desktop) {
+				width: 73%;
+			}
+
+			#email {
+				width: 100%;
+				padding: rem(15) rem(30);
+				margin-bottom: rem(10);
+				border: rem(2) solid $pale-blue;
+				border-radius: rem(40);
+				color: $very-dark-blue;
+			}
+
+			.error {
+				display: none;
+				margin-bottom: rem(25);
+				text-align: center;
+				color: $light-red;
+				font-weight: 600;
+				font-size: rem(11);
+				font-style: italic;
+			}
 		}
+
 		.btn {
+			width: 80%;
+			padding: rem(15) rem(30);
+			margin-bottom: rem(35);
+			border-radius: rem(40);
+			font-family: 'Libre Franklin', sans-serif;
+			color: $white;
+			font-weight: 600;
+			background-color: $blue;
+			border: 0;
+			cursor: pointer;
+			box-shadow: rem(0) rem(5) rem(10) rem(2) rgba($blue, 0.1);
+			transition: 0.25s;
+
+			@include breakpoint(desktop) {
+				width: 25%;
+			}
+
+			&:hover {
+				opacity: 0.7;
+			}
 		}
 	}
+
 	.hero {
+		max-width: 100%;
+		height: auto;
+		margin-bottom: rem(120);
 	}
+
 	.footer {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
 		.social-media {
+			margin-bottom: rem(25);
+			display: flex;
+			justify-content: space-between;
+			width: 65%;
+
 			.facebook {
+				width: rem(40);
+				height: rem(40);
+				border: rem(1) solid rgba($gray, 0.3);
+				border-radius: 50%;
+				padding: rem(10);
+				text-align: center;
+				color: $blue;
+				cursor: pointer;
+				transition: 0.25s;
+
+				&:hover {
+					color: $white;
+					background-color: $blue;
+				}
 			}
 			.twitter {
+				@extend .facebook;
 			}
 			.instagram {
+				@extend .facebook;
 			}
 		}
+
 		.copy-right {
+			font-size: rem(13);
+			color: $gray;
 		}
 	}
 }

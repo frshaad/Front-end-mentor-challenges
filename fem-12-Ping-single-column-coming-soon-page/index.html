@@ -19,13 +19,17 @@
 	<body>
 		<div class="container">
 			<img class="logo" src="./dist/images/logo.svg" alt="logo" />
-			<h4 class="title">We are launching soon!</h4>
+			<h4 class="title">We are launching <span class="bold">soon!</span></h4>
 			<p class="sub-title">Subscribe and get notified</p>
+
 			<form action="#" class="form">
-				<input type="email" name="email" id="email" />
-				<p class="error">Please provide a valid email address</p>
+				<div class="input-div">
+					<input type="email" name="email" id="email" placeholder="Your email address..." />
+					<p class="error">Please provide a valid email address</p>
+				</div>
 				<button class="btn">Notify Me</button>
 			</form>
+
 			<img class="hero" src="./dist/images/illustration-dashboard.webp" alt="" />
 			<footer class="footer">
 				<div class="social-media">
