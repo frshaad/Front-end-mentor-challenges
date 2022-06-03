@@ -9,8 +9,9 @@ const emailErrors = document.querySelectorAll('.email-error');
 const passwordInput = document.getElementById('password');
 const passwordErrors = document.querySelectorAll('.pass-error');
 
-submitBtn.addEventListener('click', () => {
+submitBtn.addEventListener('click', event => {
 	if (fNameInput.value === '') {
+		event.preventDefault();
 		fNameErrors.forEach(fnameError => {
 			fnameError.style.display = 'block';
 			fNameInput.style.border = '3px solid hsl(0, 100%, 74%)';
@@ -18,6 +19,7 @@ submitBtn.addEventListener('click', () => {
 	}
 
 	if (lNameInput.value === '') {
+		event.preventDefault();
 		lNameErrors.forEach(lnameError => {
 			lnameError.style.display = 'block';
 			lNameInput.style.border = '3px solid hsl(0, 100%, 74%)';
@@ -25,9 +27,11 @@ submitBtn.addEventListener('click', () => {
 	}
 
 	if (emailInput.value === '' || emailInput.validity.typeMismatch) {
+		event.preventDefault();
 		emailErrors.forEach(emailError => {
 			emailError.style.display = 'block';
 			emailInput.style.border = '3px solid hsl(0, 100%, 74%)';
+			emailInput.value = 'email@example.com';
 		});
 	}
 
@@ -36,5 +40,6 @@ submitBtn.addEventListener('click', () => {
 			passwordError.style.display = 'block';
 			passwordInput.style.border = '3px solid hsl(0, 100%, 74%)';
 		});
+		event.preventDefault();
 	}
 });
