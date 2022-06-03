@@ -4,20 +4,37 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Ping coming soon page</title>
+		<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+		<title>Frontend Mentor | Ping coming soon page</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap"
+			rel="stylesheet"
+		/>
+		<script src="https://kit.fontawesome.com/3e76ccb7a3.js" crossorigin="anonymous"></script>
 		<link rel="stylesheet" href="./dist/style.css" />
 		<script defer src="./dist/all.js"></script>
 	</head>
 	<body>
-		
-  We are launching soon!
-
-  Subscribe and get notified
-
-  Notify Me
-
-  &copy; Copyright Ping. All rights reserved.
+		<div class="container">
+			<img class="logo" src="./dist/images/logo.svg" alt="logo" />
+			<h4 class="title">We are launching soon!</h4>
+			<p class="sub-title">Subscribe and get notified</p>
+			<form action="#" class="form">
+				<input type="email" name="email" id="email" />
+				<p class="error">Please provide a valid email address</p>
+				<button class="btn">Notify Me</button>
+			</form>
+			<img class="hero" src="./dist/images/illustration-dashboard.webp" alt="" />
+			<footer class="footer">
+				<div class="social-media">
+					<i class="fa-brands fa-facebook-f facebook"></i>
+					<i class="fa-brands fa-twitter twitter"></i>
+					<i class="fa-brands fa-instagram instagram"></i>
+				</div>
+				<p class="copy-right">&copy; Copyright Ping. All rights reserved.</p>
+			</footer>
+		</div>
 	</body>
 </html>

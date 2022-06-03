@@ -1,6 +1,32 @@
 @use 'index' as *;
 
-body {
-	background-color: $dark-gray;
-	color: $white;
+.container {
+	.logo {
+	}
+	.title {
+	}
+	.sub-title {
+	}
+	.form {
+		#email {
+		}
+		.error {
+		}
+		.btn {
+		}
+	}
+	.hero {
+	}
+	.footer {
+		.social-media {
+			.facebook {
+			}
+			.twitter {
+			}
+			.instagram {
+			}
+		}
+		.copy-right {
+		}
+	}
 }
