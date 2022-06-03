@@ -4,32 +4,69 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Expenses chart component</title>
+		<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+		<title>Frontend Mentor | Expenses chart component</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
 		<link rel="stylesheet" href="./dist/style.css" />
 		<script defer src="./dist/all.js"></script>
 	</head>
 	<body>
+		<section class="dashboard">
+			<div class="dashboard__data">
+				<p class="dashboard__data__title">My balance</p>
+				<p class="dashboard__data__balance">$921.48</p>
+			</div>
+			<img src="./dist/images/logo.svg" alt="logo" class="dashboard__logo" />
+		</section>
 
-  My balance
-  $921.48
+		<section class="chart">
+			<h2 class="chart__period">Spending - Last 7 days</h2>
+			<div class="chart__bar">
+				<div class="chart__bar__datas mon">
+					<div class="chart__bar__datas__data"></div>
+					<p class="chart__bar__datas__date">mon</p>
+				</div>
+				<div class="chart__bar__datas tue">
+					<div class="chart__bar__datas__data"></div>
+					<p class="chart__bar__datas__date">tue</p>
+				</div>
+				<div class="chart__bar__datas wed">
+					<div class="chart__bar__datas__data"></div>
+					<p class="chart__bar__datas__date">wed</p>
+				</div>
+				<div class="chart__bar__datas thu">
+					<div class="chart__bar__datas__data"></div>
+					<p class="chart__bar__datas__date">thu</p>
+				</div>
+				<div class="chart__bar__datas fri">
+					<div class="chart__bar__datas__data"></div>
+					<p class="chart__bar__datas__date">fri</p>
+				</div>
+				<div class="chart__bar__datas sat">
+					<div class="chart__bar__datas__data"></div>
+					<p class="chart__bar__datas__date">sat</p>
+				</div>
+				<div class="chart__bar__datas sun">
+					<div class="chart__bar__datas__data"></div>
+					<p class="chart__bar__datas__date">sun</p>
+				</div>
+			</div>
 
-  Spending - Last 7 days
-
-  mon
-  tue
-  wed
-  thu
-  fri
-  sat
-  sun
-
-  Total this month
-  $478.33
-
-  +2.4%
-  from last month
-
+			<div class="chart__total">
+				<div class="chart__total__left">
+					<p class="chart__total__left__title">Total this month</p>
+					<p class="chart__total__left__balance">$478.33</p>
+				</div>
+				<div class="chart__total__right">
+					<p class="chart__total__right__percent">+2.4%</p>
+					<p class="chart__total__right__desc">from last month</p>
+				</div>
+			</div>
+		</section>
 	</body>
 </html>

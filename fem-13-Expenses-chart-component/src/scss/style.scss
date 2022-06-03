@@ -1,6 +1,55 @@
 @use 'index' as *;
 
-body {
-	background-color: $dark-gray;
-	color: $white;
+.dashboard {
+	&__data {
+		&__title {
+		}
+		&__balance {
+		}
+	}
+
+	&__logo {
+	}
+}
+.chart {
+	&__period {
+	}
+	&__bar {
+		&__datas {
+			&__data {
+			}
+			&__date {
+			}
+		}
+
+		.mon {
+		}
+		.tue {
+		}
+		.wed {
+		}
+		.thu {
+		}
+		.fri {
+		}
+		.sat {
+		}
+		.sun {
+		}
+	}
+
+	&__total {
+		&__left {
+			&__title {
+			}
+			&__balance {
+			}
+		}
+		&__right {
+			&__percent {
+			}
+			&__desc {
+			}
+		}
+	}
 }
