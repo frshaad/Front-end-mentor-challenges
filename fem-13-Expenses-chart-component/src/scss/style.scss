@@ -75,7 +75,7 @@
 				position: relative;
 				background-color: $soft-red;
 				border-radius: rem(5);
-				height: 100%;
+				height: rem(20);
 				margin-bottom: rem(10);
 				cursor: pointer;
 				transition: 0.25s;
@@ -116,42 +116,6 @@
 				color: $medium-brown;
 				text-align: center;
 				margin-bottom: rem(30);
-			}
-		}
-
-		.mon {
-			.chart__bar__datas__data {
-				height: 20%;
-			}
-		}
-		.tue {
-			.chart__bar__datas__data {
-				height: 40%;
-			}
-		}
-		.wed {
-			.chart__bar__datas__data {
-				height: rem(100);
-			}
-		}
-		.thu {
-			.chart__bar__datas__data {
-				height: rem(calc(1.43 * 100));
-			}
-		}
-		.fri {
-			.chart__bar__datas__data {
-				height: 25%;
-			}
-		}
-		.sat {
-			.chart__bar__datas__data {
-				height: 60%;
-			}
-		}
-		.sun {
-			.chart__bar__datas__data {
-				height: 30%;
 			}
 		}
 	}
