@@ -6,12 +6,56 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="icon" type="image/png" sizes="32x32" href="./dist/images/favicon-32x32.webp" />
 		<title>Frontend Mentor | Intro section with dropdown navigation</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap"
+			rel="stylesheet"
+		/>
 		<link rel="stylesheet" href="./dist/style.css" />
 		<script defer src="./dist/all.js"></script>
 	</head>
 	<body>
-		Features Company Careers About Login Register Make remote work Get your team in sync, no matter
-		your location. Streamline processes, create team rituals, and watch productivity soar. Learn
-		more
+		<header class="header">
+			<img src="./dist/images/logo.svg" alt="" class="header__title" />
+			<div class="header__menu">
+				<div class="header__menu__options">
+					<p class="header__menu__options__option">
+						Features
+						<img class="arrow-down" src="./dist/images/icon-arrow-down.svg" alt="icon-arrow-down" />
+						<img class="arrow-up" src="./dist/images/icon-arrow-up.svg" alt="icon-arrow-up" />
+					</p>
+					<p class="header__menu__options__option">
+						Company
+						<img class="arrow-down" src="./dist/images/icon-arrow-down.svg" alt="icon-arrow-down" />
+						<img class="arrow-up" src="./dist/images/icon-arrow-up.svg" alt="icon-arrow-up" />
+					</p>
+					<p class="header__menu__options__option">Careers</p>
+					<p class="header__menu__options__option">About</p>
+				</div>
+				<div class="header__menu__account">
+					<p class="header__menu__account__login">Login</p>
+					<p class="header__menu__options__register">Register</p>
+				</div>
+			</div>
+		</header>
+		<div class="container">
+			<img src="./dist/images/image-hero-mobile.webp" alt="" class="mobile-hero" />
+			<img src="./dist/images/image-hero-desktop.webp" alt="" class="desktop-hero" />
+			<div class="content">
+				<h1 class="content__title">Make remote work</h1>
+				<p class="content__desc">
+					Get your team in sync, no matter your location. Streamline processes, create team rituals,
+					and watch productivity soar.
+				</p>
+				<button class="content__btn">Learn more</button>
+				<div class="content__clients">
+					<img class="content__clients__client" src="./dist/images/client-databiz.svg" alt="" />
+					<img class="content__clients__client" src="./dist/images/client-audiophile.svg" alt="" />
+					<img class="content__clients__client" src="./dist/images/client-meet.svg" alt="" />
+					<img class="content__clients__client" src="./dist/images/client-maker.svg" alt="" />
+				</div>
+			</div>
+		</div>
 	</body>
 </html>
