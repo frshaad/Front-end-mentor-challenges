@@ -23,10 +23,13 @@
 		text-transform: uppercase;
 	}
 
-	.quote {
+	.quote-container {
 		margin-bottom: rem(20);
-		font-size: rem(22);
-		line-height: 1.5;
+		.quote {
+			display: inline;
+			font-size: rem(22);
+			line-height: 1.5;
+		}
 	}
 
 	.mobile-devider {
