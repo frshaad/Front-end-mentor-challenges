@@ -1,6 +1,106 @@
 @use 'index' as *;
 
-body {
-	background-color: $dark-gray;
-	color: $white;
+.header {
+	width: 90%;
+	margin: rem(25) auto;
+	position: relative;
+
+	&__title {
+	}
+
+	&__menu {
+		width: 65%;
+		height: 100vh;
+		right: 0;
+		top: 0;
+		position: fixed;
+		padding: rem(80) rem(20);
+		font-size: rem(15);
+		color: $gray;
+		background-color: aqua;
+		border: 2px solid red;
+		// display: none;
+
+		&__options {
+			border: 2px solid red;
+			margin-bottom: rem(40);
+
+			&__option {
+				margin-bottom: rem(20);
+				border: 2px solid red;
+				.arrow-down {
+				}
+				.arrow-up {
+					display: none;
+				}
+				.drop-down1 {
+					padding: 0 rem(20);
+					li {
+						padding: rem(10) 0;
+						list-style-type: none;
+						img {
+						}
+					}
+				}
+				.drop-down2 {
+					@extend .drop-down1;
+					li {
+					}
+				}
+			}
+			.features {
+			}
+		}
+
+		&__account {
+			&__login {
+			}
+			&__register {
+			}
+		}
+	}
+	.header__menu--mobile {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: rem(30);
+		height: rem(17);
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		cursor: pointer;
+
+		.line {
+			width: 100%;
+			height: rem(1);
+			background-color: $black;
+		}
+
+		&--close {
+			.line {
+			}
+		}
+	}
+}
+
+.container {
+	display: none;
+	.mobile-hero {
+		max-width: 100%;
+	}
+	.desktop-hero {
+		max-width: 100%;
+	}
+	.content {
+		&__title {
+		}
+		&__desc {
+		}
+		&__btn {
+		}
+		&__clients {
+			&__client {
+			}
+		}
+	}
 }
