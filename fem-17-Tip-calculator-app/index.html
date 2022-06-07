@@ -22,7 +22,8 @@
 			<section class="calc">
 				<div class="calc__bill">
 					<h6 class="calc__bill__label">Bill</h6>
-					<input type="number" name="bill" class="calc__bill__input" />
+					<input type="number" name="bill" step="0.01" class="calc__bill__input" />
+					<img src="./dist/images/icon-dollar.svg" alt="" class="input-icon" />
 				</div>
 				<div class="calc__tip">
 					<h6 class="calc__tip__label">Select Tip %</h6>
@@ -35,13 +36,17 @@
 						<div class="calc__tip__options--right">
 							<p>10%</p>
 							<p>25%</p>
-							<input type="number" name="tip" placeholder="Custom" class="custom-tip" />
+							<input type="number" name="tip" placeholder="Custom" step="1" class="custom-tip" />
 						</div>
 					</div>
 				</div>
 				<div class="calc__people">
-					<h6 class="calc__people__label">Number of People</h6>
-					<input type="number" name="people" class="calc__people__input" />
+					<div class="calc__people__box">
+						<h6 class="calc__people__label">Number of People</h6>
+						<p class="error-message">Can't be zero</p>
+					</div>
+					<input type="number" name="people" step="1" class="calc__people__input" />
+					<img src="./dist/images/icon-person.svg" alt="" class="input-icon" />
 				</div>
 			</section>
 

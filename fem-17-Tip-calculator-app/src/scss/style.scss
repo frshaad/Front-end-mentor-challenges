@@ -20,13 +20,25 @@ $border-radius-s: rem(5);
 	border-radius: $border-radius-xl;
 	padding: rem(30);
 
+	@include breakpoint(desktop) {
+		display: flex;
+		justify-content: space-between;
+		max-width: rem(900);
+		margin: 0 auto;
+	}
+
 	.calc {
+		@include breakpoint(desktop) {
+			max-width: 49%;
+		}
+
 		@include breakpoint-down(mobile) {
 			margin-bottom: rem(30);
 		}
 
 		&__bill {
 			margin-bottom: rem(30);
+			position: relative;
 
 			&__label {
 				margin-bottom: rem(5);
@@ -43,6 +55,20 @@ $border-radius-s: rem(5);
 				color: $very-dark-cyan;
 				font-size: rem(22);
 				font-family: 'Space Mono', monospace;
+
+				&:focus {
+					outline: none;
+				}
+
+				&:active {
+					border: rem(2) solid $stong-cyan;
+					padding: rem(6) rem(15);
+				}
+
+				&:focus {
+					border: rem(2) solid $stong-cyan;
+					padding: rem(6) rem(15);
+				}
 			}
 		}
 
@@ -106,18 +132,35 @@ $border-radius-s: rem(5);
 
 					.custom-tip {
 						width: 100%;
-						padding: rem(15) rem(10);
+						padding: rem(8) rem(10);
 
 						border: 0;
 						border-radius: $border-radius-s;
-						color: $grayish-cyan;
+						color: $very-dark-cyan;
 						background-color: $very-light-grayish-cyan;
+						font-family: 'Space Mono', monospace;
+						font-size: rem(20);
+						text-align: center;
 
 						&::placeholder {
-							color: $grayish-cyan;
+							color: $very-dark-cyan;
 							font-family: 'Space Mono', monospace;
 							font-size: rem(20);
-							text-align: right;
+							text-align: center;
+						}
+
+						&:focus {
+							outline: none;
+						}
+
+						&:active {
+							border: rem(2) solid $stong-cyan;
+							padding: rem(6) rem(15);
+						}
+
+						&:focus {
+							border: rem(2) solid $stong-cyan;
+							padding: rem(6) rem(10);
 						}
 					}
 				}
@@ -125,8 +168,28 @@ $border-radius-s: rem(5);
 		}
 
 		&__people {
-			&__label {
-				@extend .calc__bill__label;
+			position: relative;
+
+			.calc__people__box {
+				margin-bottom: rem(10);
+				display: flex;
+				justify-content: space-between;
+				align-items: baseline;
+				&__label {
+					@extend .calc__bill__label;
+				}
+
+				.error-message {
+					display: none;
+					color: hsl(0, 81%, 53%);
+					font-size: rem(14);
+					letter-spacing: rem(1.2);
+				}
+			}
+
+			.error {
+				border: rem(2) solid hsl(0, 81%, 53%);
+				padding: rem(6) rem(15);
 			}
 
 			&__input {
@@ -136,9 +199,14 @@ $border-radius-s: rem(5);
 	}
 
 	.result {
+		width: 100%;
 		padding: rem(25);
 		background-color: $very-dark-cyan;
 		border-radius: $border-radius-xl;
+		@include breakpoint(desktop) {
+			max-width: 49%;
+			padding: rem(40);
+		}
 
 		&__tip {
 			display: flex;
@@ -160,6 +228,9 @@ $border-radius-s: rem(5);
 			&__number {
 				font-size: rem(28);
 				color: $stong-cyan;
+				@include breakpoint(desktop) {
+					font-size: rem(40);
+				}
 			}
 		}
 
@@ -188,9 +259,19 @@ $border-radius-s: rem(5);
 			border-radius: $border-radius-s;
 			cursor: pointer;
 
+			@include breakpoint(desktop) {
+				margin-top: rem(120);
+			}
+
 			&:hover {
 				background-color: $light-grayish-cyan;
 			}
 		}
 	}
+}
+
+.input-icon {
+	position: absolute;
+	bottom: rem(16);
+	left: rem(20);
 }
