@@ -1,0 +1,109 @@
+@use 'index' as *;
+
+.dashboard {
+	width: 90%;
+	margin: rem(25) auto;
+
+	border-radius: rem(15);
+	background-color: $dark-blue;
+
+	&__user {
+		padding: rem(30);
+		display: flex;
+		align-items: center;
+
+		background-color: $blue;
+		border-radius: rem(15);
+
+		&__pic {
+			max-width: rem(50);
+			margin-right: rem(20);
+
+			border: rem(3) solid #fff;
+			border-radius: 50%;
+		}
+
+		&__info {
+			:first-child {
+				font-size: rem(14);
+				font-weight: 300;
+				color: $pale-blue;
+			}
+			:nth-child(2) {
+				font-weight: 300;
+				font-size: rem(20);
+			}
+		}
+	}
+
+	&__menu {
+		width: 90%;
+		margin: 0 auto;
+		padding: rem(20) rem(10);
+		display: flex;
+		justify-content: space-between;
+
+		p {
+			font-size: rem(16);
+			color: $pale-blue;
+			cursor: pointer;
+			transition: 0.2s;
+
+			&:hover {
+				color: #fff;
+			}
+		}
+	}
+}
+
+.container {
+	width: 90%;
+	margin: rem(25) auto;
+
+	.box {
+		margin-bottom: rem(20);
+		position: relative;
+		width: 100%;
+		height: rem(150);
+
+		overflow: hidden;
+		border-radius: rem(15);
+		background-color: $dark-blue;
+
+		&__icon {
+			position: absolute;
+			right: rem(20);
+			top: rem(-10);
+			width: rem(60);
+			height: auto;
+		}
+
+		.absolute-box {
+			padding: rem(25);
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 80%;
+
+			border-radius: rem(15);
+			background-color: $dark-blue;
+
+			.title {
+				margin-bottom: rem(15);
+				display: flex;
+				justify-content: space-between;
+			}
+
+			.hours {
+				font-weight: 300;
+				display: flex;
+				justify-content: space-between;
+			}
+		}
+	}
+
+	.box1 {
+		background-color: $work-red;
+	}
+}
