@@ -1,6 +1,196 @@
 @use 'index' as *;
 
-body {
-	background-color: $dark-gray;
-	color: $white;
+$border-radius-xl: rem(20);
+$border-radius-s: rem(5);
+
+.title {
+	width: rem(100);
+	height: auto;
+	margin: rem(40) auto;
+
+	letter-spacing: rem(7);
+	word-wrap: break-word;
+	text-transform: uppercase;
+	color: $very-dark-cyan;
+}
+
+.container {
+	background-color: $white;
+	width: 100%;
+	border-radius: $border-radius-xl;
+	padding: rem(30);
+
+	.calc {
+		@include breakpoint-down(mobile) {
+			margin-bottom: rem(30);
+		}
+
+		&__bill {
+			margin-bottom: rem(30);
+
+			&__label {
+				margin-bottom: rem(5);
+			}
+
+			&__input {
+				width: 100%;
+				padding: rem(8) rem(15);
+
+				border: 0;
+				border-radius: $border-radius-s;
+				text-align: right;
+				background-color: $very-light-grayish-cyan;
+				color: $very-dark-cyan;
+				font-size: rem(22);
+				font-family: 'Space Mono', monospace;
+			}
+		}
+
+		&__tip {
+			margin-bottom: rem(30);
+			&__label {
+			}
+
+			&__options {
+				display: flex;
+				justify-content: space-between;
+				margin: rem(10) auto;
+
+				&--left {
+					text-align: center;
+					width: 48%;
+
+					p {
+						padding: rem(5) rem(50);
+
+						border-radius: $border-radius-s;
+						color: $very-light-grayish-cyan;
+						background-color: $very-dark-cyan;
+						cursor: pointer;
+						transition: 0.2s;
+
+						&:not(:last-child) {
+							margin-bottom: rem(15);
+						}
+
+						&:hover {
+							background-color: $light-grayish-cyan;
+							color: $very-dark-cyan;
+						}
+					}
+				}
+
+				&--right {
+					text-align: center;
+					width: 48%;
+
+					p {
+						padding: rem(5) rem(50);
+
+						border-radius: $border-radius-s;
+						cursor: pointer;
+						transition: 0.2s;
+
+						&:not(:last-child) {
+							margin-bottom: rem(15);
+
+							color: $very-light-grayish-cyan;
+							background-color: $very-dark-cyan;
+						}
+
+						&:hover {
+							background-color: $light-grayish-cyan;
+							color: $very-dark-cyan;
+						}
+					}
+
+					.custom-tip {
+						width: 100%;
+						padding: rem(15) rem(10);
+
+						border: 0;
+						border-radius: $border-radius-s;
+						color: $grayish-cyan;
+						background-color: $very-light-grayish-cyan;
+
+						&::placeholder {
+							color: $grayish-cyan;
+							font-family: 'Space Mono', monospace;
+							font-size: rem(20);
+							text-align: right;
+						}
+					}
+				}
+			}
+		}
+
+		&__people {
+			&__label {
+				@extend .calc__bill__label;
+			}
+
+			&__input {
+				@extend .calc__bill__input !optional;
+			}
+		}
+	}
+
+	.result {
+		padding: rem(25);
+		background-color: $very-dark-cyan;
+		border-radius: $border-radius-xl;
+
+		&__tip {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin-bottom: rem(30);
+
+			&__title {
+				:first-child {
+					color: $very-light-grayish-cyan;
+					font-size: rem(15);
+				}
+				:nth-child(2) {
+					color: $dark-grayish-cyan;
+					font-size: rem(14);
+				}
+			}
+
+			&__number {
+				font-size: rem(28);
+				color: $stong-cyan;
+			}
+		}
+
+		&__total {
+			@extend .result__tip;
+
+			&__title {
+				@extend .result__tip__title;
+			}
+
+			&__number {
+				@extend .result__tip__number;
+			}
+		}
+
+		&__reset {
+			width: 100%;
+			padding: rem(10);
+
+			font-size: rem(16);
+			text-transform: uppercase;
+			font-family: 'Space Mono', monospace;
+			background-color: $stong-cyan;
+			color: $very-dark-cyan;
+			border: 0;
+			border-radius: $border-radius-s;
+			cursor: pointer;
+
+			&:hover {
+				background-color: $light-grayish-cyan;
+			}
+		}
+	}
 }
