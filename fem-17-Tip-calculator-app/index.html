@@ -22,20 +22,27 @@
 			<section class="calc">
 				<div class="calc__bill">
 					<h6 class="calc__bill__label">Bill</h6>
-					<input type="number" name="bill" step="0.01" class="calc__bill__input" />
+					<input
+						type="number"
+						name="bill"
+						step="0.01"
+						placeholder="0"
+						value="0"
+						class="calc__bill__input"
+					/>
 					<img src="./dist/images/icon-dollar.svg" alt="" class="input-icon" />
 				</div>
 				<div class="calc__tip">
 					<h6 class="calc__tip__label">Select Tip %</h6>
 					<div class="calc__tip__options">
 						<div class="calc__tip__options--left">
-							<p>5%</p>
-							<p>15%</p>
-							<p>50%</p>
+							<p><span>5</span>%</p>
+							<p><span>15</span>%</p>
+							<p><span>50</span>%</p>
 						</div>
 						<div class="calc__tip__options--right">
-							<p>10%</p>
-							<p>25%</p>
+							<p><span>10</span>%</p>
+							<p><span>25</span>%</p>
 							<input type="number" name="tip" placeholder="Custom" step="1" class="custom-tip" />
 						</div>
 					</div>
@@ -45,7 +52,14 @@
 						<h6 class="calc__people__label">Number of People</h6>
 						<p class="error-message">Can't be zero</p>
 					</div>
-					<input type="number" name="people" step="1" class="calc__people__input" />
+					<input
+						type="number"
+						name="people"
+						step="1"
+						value="0"
+						placeholder="0"
+						class="calc__people__input"
+					/>
 					<img src="./dist/images/icon-person.svg" alt="" class="input-icon" />
 				</div>
 			</section>
@@ -57,7 +71,7 @@
 						<p>/ person</p>
 					</div>
 					<div class="result__tip__number">
-						<p>$4.27</p>
+						<p>$0.00</p>
 					</div>
 				</div>
 				<div class="result__total">
@@ -66,7 +80,7 @@
 						<p>/ person</p>
 					</div>
 					<div class="result__total__number">
-						<p>$32.79</p>
+						<p>$0.00</p>
 					</div>
 				</div>
 				<button class="result__reset">reset</button>

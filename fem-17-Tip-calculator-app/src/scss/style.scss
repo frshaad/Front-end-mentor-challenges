@@ -58,24 +58,21 @@ $border-radius-s: rem(5);
 
 				&:focus {
 					outline: none;
+					border: rem(2) solid $strong-cyan;
+					padding: rem(6.4) rem(15);
 				}
 
-				&:active {
-					border: rem(2) solid $stong-cyan;
-					padding: rem(6) rem(15);
-				}
-
-				&:focus {
-					border: rem(2) solid $stong-cyan;
-					padding: rem(6) rem(15);
-				}
+				// &:active {
+				// 	border: rem(2) solid $strong-cyan;
+				// 	padding: rem(6) rem(15);
+				// }
 			}
 		}
 
 		&__tip {
 			margin-bottom: rem(30);
-			&__label {
-			}
+			// &__label {
+			// }
 
 			&__options {
 				display: flex;
@@ -151,18 +148,19 @@ $border-radius-s: rem(5);
 
 						&:focus {
 							outline: none;
+							border: rem(2) solid $strong-cyan;
+							padding: rem(6) rem(10);
 						}
 
 						&:active {
-							border: rem(2) solid $stong-cyan;
+							border: rem(2) solid $strong-cyan;
 							padding: rem(6) rem(15);
 						}
-
-						&:focus {
-							border: rem(2) solid $stong-cyan;
-							padding: rem(6) rem(10);
-						}
 					}
+				}
+
+				.active-tip {
+					background-color: $strong-cyan !important;
 				}
 			}
 		}
@@ -227,7 +225,7 @@ $border-radius-s: rem(5);
 
 			&__number {
 				font-size: rem(28);
-				color: $stong-cyan;
+				color: $strong-cyan;
 				@include breakpoint(desktop) {
 					font-size: rem(40);
 				}
@@ -253,7 +251,7 @@ $border-radius-s: rem(5);
 			font-size: rem(16);
 			text-transform: uppercase;
 			font-family: 'Space Mono', monospace;
-			background-color: $stong-cyan;
+			background-color: $strong-cyan;
 			color: $very-dark-cyan;
 			border: 0;
 			border-radius: $border-radius-s;
