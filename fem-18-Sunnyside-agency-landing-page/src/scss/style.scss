@@ -1,1 +1,137 @@
 @use 'index' as *;
+
+.container {
+	position: relative;
+	// Start of Header
+	.header {
+		position: absolute;
+		&__logo {
+		}
+		&__nav {
+			&__link {
+			}
+			.contact {
+			}
+		}
+	}
+	// End of Header
+
+	// Start of Hero
+	.hero {
+		width: 100%;
+		height: rem(500);
+
+		background-image: url('../../dist/images/optimized/desktop/image-header.jpg');
+		background-repeat: no-repeat;
+		background-size: contain;
+		text-align: center;
+
+		&__title {
+			position: relative;
+			top: rem(120);
+
+			font-family: 'Fraunces', serif;
+			font-size: rem(40);
+			text-transform: uppercase;
+			letter-spacing: rem(4);
+			color: $white;
+		}
+		&__arrow {
+			position: relative;
+			top: rem(150);
+			height: rem(50);
+			width: auto;
+		}
+	}
+	// End of Hero
+
+	// Start of Section 1
+	.section-1 {
+		&__img {
+			.desktop {
+			}
+			.mobile {
+			}
+		}
+		&__article {
+			&__title {
+			}
+			&__desc {
+			}
+			&__link {
+			}
+		}
+	}
+	// End of Section 1
+
+	// Start of Section 2
+	.section-2 {
+		&__article {
+			&__title {
+			}
+			&__desc {
+			}
+			&__link {
+			}
+		}
+		&__img {
+			.desktop {
+			}
+			.mobile {
+			}
+		}
+	}
+	// End of Section 2
+
+	// Start of Section 3
+	.section-3 {
+		&__article--left {
+			&__title {
+			}
+			&__desc {
+			}
+		}
+	}
+	// End of Section 3
+
+	// Start of Clients
+	.clients {
+		&__title {
+		}
+		&__div {
+			&client {
+				&__pic {
+				}
+				&__opinion {
+				}
+				&__name {
+				}
+				&__role {
+				}
+			}
+		}
+	}
+	// End of Clients
+
+	// Start of Album
+	.album {
+		&__pic {
+		}
+	}
+	// End of Album
+
+	// Start of Footer
+	.footer {
+		&__logo {
+		}
+		&__nav {
+			&__link {
+			}
+		}
+		&__social {
+			&__icon {
+			}
+		}
+	}
+	// End of Footer
+}
