@@ -107,6 +107,7 @@
 			@include breakpoint(desktop) {
 				width: 50%;
 				padding: 10%;
+				// max-height: rem(600);
 			}
 
 			&__title {
@@ -170,6 +171,13 @@
 			}
 			&__link {
 				@extend .section-1__article__link;
+				&::before {
+					background-color: rgba($soft-red, 0.5);
+				}
+
+				&:hover::before {
+					background-color: rgba($soft-red, 1);
+				}
 			}
 		}
 		&__img {
@@ -191,7 +199,43 @@
 
 	// Start of Section 3
 	.section-3 {
+		@extend .section-1;
+
 		&__article--left {
+			width: 50%;
+			position: relative;
+
+			text-align: center;
+
+			&__img {
+				width: 100%;
+				height: auto;
+			}
+
+			&__title {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
+
+			&__desc {
+				width: 65%;
+				position: absolute;
+				top: 65%;
+				left: 50%;
+				transform: translate(-50%, -65%);
+
+				font-size: rem(13);
+			}
+		}
+
+		&__article--right {
+			@extend .section-3__article--left;
+
+			&__img {
+				@extend .section-3__article--left__img;
+			}
 			&__title {
 			}
 			&__desc {
