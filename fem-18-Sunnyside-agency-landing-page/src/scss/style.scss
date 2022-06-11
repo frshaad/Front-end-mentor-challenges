@@ -4,13 +4,46 @@
 	position: relative;
 	// Start of Header
 	.header {
+		width: 90%;
 		position: absolute;
+		top: rem(40);
+		left: 50%;
+		transform: translateX(-50%);
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		z-index: 1;
+
 		&__logo {
+			cursor: pointer;
 		}
+
 		&__nav {
+			:not(:last-child) {
+				margin-right: rem(30);
+				font-size: rem(14);
+			}
+
 			&__link {
+				text-decoration: none;
+				color: $white;
 			}
 			.contact {
+				padding: rem(15) rem(30);
+
+				font-size: rem(14);
+				font-family: 'Fraunces', serif;
+				text-transform: uppercase;
+				background-color: $white;
+				color: $very-dark-desaturated-blue;
+				border-radius: rem(30);
+				transition: 0.2s;
+
+				&:hover {
+					color: $white;
+					background-color: rgba($white, 0.4);
+				}
 			}
 		}
 	}
@@ -19,46 +52,105 @@
 	// Start of Hero
 	.hero {
 		width: 100%;
-		height: rem(500);
+		height: 100vh;
+		position: relative;
 
 		background-image: url('../../dist/images/optimized/desktop/image-header.jpg');
 		background-repeat: no-repeat;
-		background-size: contain;
+		background-size: cover;
 		text-align: center;
+		background-position: center;
 
 		&__title {
-			position: relative;
-			top: rem(120);
+			position: absolute;
+			top: 30%;
+			left: 50%;
+			transform: translate(-50%, -30%);
 
 			font-family: 'Fraunces', serif;
-			font-size: rem(40);
+			font-size: rem(50);
 			text-transform: uppercase;
-			letter-spacing: rem(4);
+			letter-spacing: rem(6);
 			color: $white;
 		}
 		&__arrow {
-			position: relative;
-			top: rem(150);
-			height: rem(50);
-			width: auto;
+			position: absolute;
+			top: 55%;
+			left: 50%;
+			transform: translate(-50%, -55%);
 		}
 	}
 	// End of Hero
 
 	// Start of Section 1
 	.section-1 {
+		width: 100%;
+		display: flex;
+
 		&__img {
-			.desktop {
+			width: 100%;
+
+			@include breakpoint(desktop) {
+				width: 50%;
+				order: 1;
 			}
-			.mobile {
+
+			img {
+				width: 100%;
+				height: auto;
 			}
 		}
+
 		&__article {
+			width: 100%;
+
+			@include breakpoint(desktop) {
+				width: 50%;
+				padding: 10%;
+			}
+
 			&__title {
+				margin-bottom: rem(25);
+
+				font-family: 'Fraunces', serif;
+				font-size: rem(42);
 			}
+
 			&__desc {
+				margin-bottom: rem(25);
+
+				line-height: 1.6;
+				color: $dark-grayish-blue;
 			}
+
 			&__link {
+				position: relative;
+
+				font-family: 'Fraunces', serif;
+				letter-spacing: rem(2);
+				font-size: rem(16);
+				text-decoration: none;
+				color: $very-dark-desaturated-blue;
+				text-transform: uppercase;
+
+				&::before {
+					content: '';
+					display: block;
+					width: 110%;
+					height: 8px;
+					position: absolute;
+					bottom: rem(-1);
+					left: 50%;
+					transform: translateX(-50%);
+					border-radius: rem(3);
+					background-color: rgba($yellow, 0.5);
+					z-index: -1;
+					transition: 0.2s;
+				}
+
+				&:hover::before {
+					background-color: rgba($yellow, 1);
+				}
 			}
 		}
 	}
@@ -66,15 +158,29 @@
 
 	// Start of Section 2
 	.section-2 {
+		@extend .section-1;
+
 		&__article {
+			@extend .section-1__article;
 			&__title {
+				@extend .section-1__article__title;
 			}
 			&__desc {
+				@extend .section-1__article__desc;
 			}
 			&__link {
+				@extend .section-1__article__link;
 			}
 		}
 		&__img {
+			@extend .section-1__img;
+			@include breakpoint(desktop) {
+				order: -1;
+			}
+			img {
+				width: 100%;
+				height: auto;
+			}
 			.desktop {
 			}
 			.mobile {
@@ -134,4 +240,17 @@
 		}
 	}
 	// End of Footer
+
+	// Hidden on mobile
+	.desktop {
+		@include breakpoint-down(mobile) {
+			display: none;
+		}
+	}
+	// Hidden on desktop
+	.mobile {
+		@include breakpoint(desktop) {
+			display: none;
+		}
+	}
 }
