@@ -214,19 +214,22 @@
 
 			&__title {
 				position: absolute;
-				top: 50%;
-				left: 50%;
-				transform: translate(-50%, -50%);
-			}
-
-			&__desc {
-				width: 65%;
-				position: absolute;
 				top: 65%;
 				left: 50%;
 				transform: translate(-50%, -65%);
 
+				font-size: rem(32);
+			}
+
+			&__desc {
+				width: 45%;
+				position: absolute;
+				top: 80%;
+				left: 50%;
+				transform: translate(-50%, -80%);
+
 				font-size: rem(13);
+				line-height: 1.7;
 			}
 		}
 
@@ -237,8 +240,10 @@
 				@extend .section-3__article--left__img;
 			}
 			&__title {
+				@extend .section-3__article--left__title;
 			}
 			&__desc {
+				@extend .section-3__article--left__desc;
 			}
 		}
 	}
@@ -246,17 +251,50 @@
 
 	// Start of Clients
 	.clients {
+		padding: rem(100);
+
 		&__title {
+			text-align: center;
+			font-size: rem(26);
+			letter-spacing: rem(6);
+			text-transform: uppercase;
+			font-family: 'Fraunces', serif;
+			color: $dark-grayish-blue;
 		}
 		&__div {
-			&client {
+			display: flex;
+			justify-content: space-between;
+			padding: clamp(rem(20), rem(60), rem(70));
+			margin: 0 auto;
+
+			.client {
+				text-align: center;
+				padding: rem(20);
+
 				&__pic {
+					max-width: rem(100);
+					margin-bottom: rem(50);
+
+					border-radius: 50%;
 				}
+
 				&__opinion {
+					margin-bottom: rem(50);
+
+					color: $very-dark-grayish-blue;
+					line-height: 1.7;
 				}
+
 				&__name {
+					margin-bottom: rem(10);
+
+					font-size: rem(22);
+					font-family: 'Fraunces', serif;
 				}
+
 				&__role {
+					color: $dark-grayish-blue;
+					font-size: rem(15);
 				}
 			}
 		}
@@ -265,21 +303,60 @@
 
 	// Start of Album
 	.album {
+		display: flex;
+		width: 100%;
 		&__pic {
+			max-width: 25%;
 		}
 	}
 	// End of Album
 
 	// Start of Footer
 	.footer {
+		width: 100%;
+		padding: rem(50);
+
+		text-align: center;
+		background-color: lighten($footer, 20);
+
 		&__logo {
-		}
-		&__nav {
-			&__link {
+			margin-bottom: rem(20);
+
+			path {
+				fill: $graphic-design-text;
 			}
 		}
+
+		&__nav {
+			margin-bottom: rem(60);
+
+			&__link {
+				text-decoration: none;
+				color: $graphic-design-text;
+				transition: 0.2s;
+
+				&:nth-child(2) {
+					margin: 0 rem(30);
+				}
+
+				&:hover {
+					color: $white;
+				}
+			}
+		}
+
 		&__social {
 			&__icon {
+				cursor: pointer;
+				transition: 0.2s;
+
+				&:not(:last-child) {
+					margin-right: rem(25);
+				}
+
+				&:hover path {
+					fill: $white;
+				}
 			}
 		}
 	}
