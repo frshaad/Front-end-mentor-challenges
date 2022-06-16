@@ -47,7 +47,7 @@ function browsersyncServe(cb) {
 		server: {
 			baseDir: '.',
 		},
-		browser: 'firefox',
+		browser: 'chrome',
 	});
 	cb();
 }
