@@ -1,0 +1,89 @@
+@use '../util/breakpoint' as *;
+@use '../util/colors' as *;
+@use '../util/functions' as *;
+
+.hero {
+	width: 100%;
+	padding: rem(150) rem(20);
+	margin-bottom: rem(100);
+	position: relative;
+
+	overflow: hidden;
+	border-radius: 0 0 0 rem(100);
+	background-color: $very-light-red;
+	background-image: -webkit-linear-gradient(180deg, $very-light-red 0%, $light-red 100%);
+	background-image: -moz-linear-gradient(180deg, $very-light-red 0%, $light-red 100%);
+	background-image: -o-linear-gradient(180deg, $very-light-red 0%, $light-red 100%);
+	background-image: linear-gradient(180deg, $very-light-red 0%, $light-red 100%);
+
+	&::before {
+		content: '';
+		width: 1324px;
+		height: 1323px;
+		background-image: url(../../../dist/images/bg-pattern-intro-mobile.svg);
+		position: absolute;
+		top: -55%;
+		left: -60%;
+		z-index: 0;
+		opacity: 0.6;
+	}
+
+	&__title {
+		position: relative;
+		margin-bottom: rem(20);
+
+		text-align: center;
+		text-transform: capitalize;
+		color: $white;
+		font-weight: 600;
+		font-size: rem(32);
+		z-index: 1;
+	}
+
+	&__description {
+		position: relative;
+		margin-bottom: rem(50);
+
+		text-align: center;
+		color: $white;
+		font-size: rem(20);
+		z-index: 1;
+	}
+
+	&__links {
+		width: 80%;
+		margin: 0 auto;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		z-index: 1;
+
+		&__start {
+			padding: rem(12) 0;
+			width: 45%;
+
+			text-align: center;
+			list-style: none;
+			color: $CTA-text;
+			background-color: $white;
+			font-weight: 600;
+			border-radius: rem(30);
+			cursor: pointer;
+			z-index: 1;
+		}
+
+		&__more {
+			padding: rem(12) 0;
+			width: 45%;
+
+			text-align: center;
+			list-style: none;
+			color: $white;
+			border: rem(1) solid $white;
+			font-weight: 600;
+			border-radius: rem(30);
+			cursor: pointer;
+			z-index: 1;
+		}
+	}
+}

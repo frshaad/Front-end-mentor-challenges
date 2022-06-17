@@ -1,1 +1,15 @@
 @use 'index' as *;
+
+.container {
+	.mobile {
+		@include breakpoint(desktop) {
+			display: none;
+		}
+	}
+
+	.desktop {
+		@include breakpoint-down(mobile) {
+			display: none;
+		}
+	}
+}

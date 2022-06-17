@@ -4,5 +4,10 @@
 @forward 'util/boilerplate';
 @forward 'util/breakpoint';
 @forward 'util/tagNames';
-// @forward 'util';
-// @forward 'components';
+
+@forward 'components/header';
+@forward 'components/hero';
+@forward 'components/section1';
+@forward 'components/section2';
+@forward 'components/section3';
+@forward 'components/header';

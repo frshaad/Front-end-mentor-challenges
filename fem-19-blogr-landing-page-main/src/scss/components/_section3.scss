@@ -1,0 +1,56 @@
+@use '../util/breakpoint' as *;
+@use '../util/colors' as *;
+@use '../util/functions' as *;
+
+.section3 {
+	text-align: center;
+	max-width: 95%;
+	margin-bottom: rem(100);
+
+	&__title {
+		margin-bottom: rem(50);
+
+		color: $heading;
+		font-size: rem(28);
+	}
+
+	&__img-box {
+		width: 100%;
+		height: auto;
+		margin-bottom: rem(40);
+
+		&__img--mobile {
+			width: 100%;
+			height: auto;
+		}
+
+		&__img--desktop {
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	&__content {
+		width: 90%;
+		margin: 0 auto;
+
+		&__title {
+			margin-bottom: rem(50);
+
+			color: $heading;
+			font-size: rem(28);
+			margin: 0 auto;
+			margin-bottom: rem(20);
+			max-width: 80%;
+		}
+
+		&__description {
+			width: 90%;
+			margin: 0 auto;
+			margin-bottom: rem(40);
+
+			line-height: 1.7;
+			color: $body-copy;
+		}
+	}
+}

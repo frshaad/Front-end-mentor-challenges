@@ -1,0 +1,12 @@
+@use '../util/breakpoint' as *;
+@use '../util/colors' as *;
+@use '../util/functions' as *;
+
+.footer {
+	&__logo {
+	}
+	&__links {
+		&__link {
+		}
+	}
+}

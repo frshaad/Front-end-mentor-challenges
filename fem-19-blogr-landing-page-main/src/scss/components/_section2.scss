@@ -1,0 +1,64 @@
+@use '../util/breakpoint' as *;
+@use '../util/colors' as *;
+@use '../util/functions' as *;
+
+.section2 {
+	position: relative;
+	margin-bottom: rem(50);
+	height: rem(750);
+
+	border-radius: 0 rem(100);
+	text-align: center;
+	overflow: visible;
+	background-color: $dark-gray-blue;
+	background-image: url(../../../dist/images/bg-pattern-circles.svg),
+		-webkit-linear-gradient(180deg, $dark-gray-blue 0%, $dark-desaturated-blue 100%);
+	background-image: url(../../../dist/images/bg-pattern-circles.svg),
+		-moz-linear-gradient(180deg, $dark-gray-blue 0%, $dark-desaturated-blue 100%);
+	background-image: url(../../../dist/images/bg-pattern-circles.svg),
+		-o-linear-gradient(180deg, $dark-gray-blue 0%, $dark-desaturated-blue 100%);
+	background-image: url(../../../dist/images/bg-pattern-circles.svg),
+		linear-gradient(180deg, $dark-gray-blue 0%, $dark-desaturated-blue 100%);
+
+	background-size: 150%, contain;
+	background-repeat: no-repeat;
+	background-position: top rem(-300) center, center;
+
+	&__img-box {
+		position: relative;
+		top: rem(-220);
+		z-index: 1;
+		width: 100%;
+		margin: 0 auto;
+
+		&__img {
+			width: 100%;
+		}
+	}
+
+	&__content {
+		position: relative;
+		top: rem(-200);
+		z-index: 1;
+		width: 75%;
+		margin: 0 auto;
+
+		color: $white;
+
+		&__title {
+			position: relative;
+			z-index: 1;
+			margin-bottom: rem(30);
+
+			font-size: rem(40);
+		}
+
+		&__description {
+			position: relative;
+			z-index: 1;
+
+			line-height: 1.8;
+			font-size: rem(18);
+		}
+	}
+}
