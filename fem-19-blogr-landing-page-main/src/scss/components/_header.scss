@@ -7,11 +7,17 @@
 	padding: rem(20);
 	position: absolute;
 	z-index: 2;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 
-	@include breakpoint-down(mobile) {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
+	color: $white;
+	text-transform: capitalize;
+
+	@include breakpoint(desktop) {
+		max-width: 90%;
+		left: 50%;
+		transform: translateX(-50%);
 	}
 
 	&__logo {
@@ -22,19 +28,155 @@
 	}
 
 	&__menu {
-		display: none;
+		display: flex;
+		justify-content: space-between;
+		width: 80%;
 
-		&__item {
+		@include breakpoint-down(mobile) {
+			// display: none;
+			width: 90%;
+			padding: rem(30) 0;
+			height: rem(500);
+			position: absolute;
+			top: rem(100);
+			left: 50%;
+			transform: translateX(-50%);
+			flex-direction: column;
+			align-items: center;
+
+			border-radius: rem(10);
+			box-shadow: 4.5px 4.5px 3.6px rgba(0, 0, 0, 0.024), 12.5px 12.5px 10px rgba(0, 0, 0, 0.035),
+				30.1px 30.1px 24.1px rgba(0, 0, 0, 0.046), 100px 100px 80px rgba(0, 0, 0, 0.07);
+			background-color: $white;
+		}
+
+		div {
+			display: flex;
+			flex-direction: column;
+
+			@include breakpoint(desktop) {
+				display: flex;
+			}
+
+			&__item {
+				padding: rem(0) rem(10);
+				position: relative;
+				display: flex;
+				align-items: center;
+
+				list-style-type: none;
+				cursor: pointer;
+
+				@include breakpoint-down(mobile) {
+					padding: rem(20) 0;
+					flex-direction: column;
+					width: 100%;
+
+					font-weight: 600;
+					font-size: rem(22);
+					color: $footer-bg;
+					border-bottom: rem(1) solid $footer-text;
+				}
+
+				.arrow-light {
+					padding: 0 rem(3);
+					@include breakpoint-down(mobile) {
+						display: none;
+					}
+				}
+
+				.arrow-dark {
+					padding: 0 rem(10);
+					margin: rem(10) 0;
+					@include breakpoint(desktop) {
+						display: none;
+					}
+				}
+
+				&__links {
+					position: absolute;
+
+					border-radius: rem(5);
+					background-color: $white;
+					color: $body-copy;
+					transition: 0.2s;
+
+					@include breakpoint-down(mobile) {
+						// display: none;
+						position: relative;
+						width: 90%;
+						padding: rem(20) 0;
+
+						text-align: center;
+						background-color: lighten($footer-text, 15);
+						color: $body-copy;
+					}
+
+					@include breakpoint(desktop) {
+						padding: rem(20);
+						top: rem(30);
+						left: rem(-10);
+
+						box-shadow: 4.5px 4.5px 3.6px rgba(0, 0, 0, 0.024),
+							12.5px 12.5px 10px rgba(0, 0, 0, 0.035), 30.1px 30.1px 24.1px rgba(0, 0, 0, 0.046),
+							100px 100px 80px rgba(0, 0, 0, 0.07);
+					}
+
+					li {
+						padding: rem(5) 0;
+
+						font-size: rem(14);
+						transition: 0.2s;
+						list-style-type: none;
+
+						@include breakpoint-down(mobile) {
+							// display: none;
+							font-size: rem(18);
+						}
+
+						&:hover {
+							color: #000;
+							font-weight: 600;
+						}
+					}
+				}
+			}
 		}
 	}
 
 	&__user {
-		display: none;
+		// @include breakpoint-down(mobile) {
+		// 	padding: rem(20) 0;
+		// 	flex-direction: column;
+		// 	width: 100%;
+		// 	position: absolute;
+
+		// 	color: $footer-bg;
+		// }
+
+		display: flex;
+		align-items: center;
+
+		font-weight: 600;
 
 		&__login {
+			@extend .header__menu__item !optional;
+			padding: 0 rem(15);
 		}
 
 		&__signup {
+			@extend .header__menu__item !optional;
+			padding: rem(10) rem(30);
+
+			background-color: $white;
+			color: $CTA-text;
+			border-radius: rem(25);
+			transition: 0.2s;
+
+			&:hover {
+				background-color: rgba($white, 0.5);
+				color: $white;
+			}
 		}
 	}
 }
