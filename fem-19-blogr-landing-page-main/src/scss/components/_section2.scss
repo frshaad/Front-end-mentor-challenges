@@ -12,12 +12,6 @@
 	overflow: visible;
 	background-color: $dark-gray-blue;
 	background-image: url(../../../dist/images/bg-pattern-circles.svg),
-		-webkit-linear-gradient(180deg, $dark-gray-blue 0%, $dark-desaturated-blue 100%);
-	background-image: url(../../../dist/images/bg-pattern-circles.svg),
-		-moz-linear-gradient(180deg, $dark-gray-blue 0%, $dark-desaturated-blue 100%);
-	background-image: url(../../../dist/images/bg-pattern-circles.svg),
-		-o-linear-gradient(180deg, $dark-gray-blue 0%, $dark-desaturated-blue 100%);
-	background-image: url(../../../dist/images/bg-pattern-circles.svg),
 		linear-gradient(180deg, $dark-gray-blue 0%, $dark-desaturated-blue 100%);
 
 	background-size: 150%, contain;

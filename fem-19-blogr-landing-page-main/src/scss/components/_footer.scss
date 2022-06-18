@@ -3,10 +3,35 @@
 @use '../util/functions' as *;
 
 .footer {
+	width: 100%;
+	padding: rem(80) 0;
+
+	background-color: $footer-bg;
+	text-align: center;
+	border-radius: 0 rem(100) 0 0;
+	color: $white;
+
 	&__logo {
+		margin-bottom: rem(60);
 	}
+
 	&__links {
+		margin-bottom: rem(40);
+
 		&__link {
+			margin-bottom: rem(10);
+
+			text-transform: capitalize;
+			color: $footer-text;
+			list-style-type: none;
+			font-size: rem(18);
+		}
+
+		:first-child {
+			margin-bottom: rem(25);
+
+			color: $white;
+			font-weight: 600;
 		}
 	}
 }

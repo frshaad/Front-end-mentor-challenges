@@ -11,22 +11,11 @@
 	overflow: hidden;
 	border-radius: 0 0 0 rem(100);
 	background-color: $very-light-red;
-	background-image: -webkit-linear-gradient(180deg, $very-light-red 0%, $light-red 100%);
-	background-image: -moz-linear-gradient(180deg, $very-light-red 0%, $light-red 100%);
-	background-image: -o-linear-gradient(180deg, $very-light-red 0%, $light-red 100%);
-	background-image: linear-gradient(180deg, $very-light-red 0%, $light-red 100%);
-
-	&::before {
-		content: '';
-		width: 1324px;
-		height: 1323px;
-		background-image: url(../../../dist/images/bg-pattern-intro-mobile.svg);
-		position: absolute;
-		top: -55%;
-		left: -60%;
-		z-index: 0;
-		opacity: 0.6;
-	}
+	background-image: url(../../../dist/images/bg-pattern-intro-mobile.svg),
+		linear-gradient(180deg, $very-light-red 0%, $light-red 100%);
+	background-size: 300%, contain;
+	background-repeat: no-repeat;
+	background-position: top rem(-300) left rem(-400), center;
 
 	&__title {
 		position: relative;
