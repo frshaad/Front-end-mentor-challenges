@@ -1,0 +1,75 @@
+@use '../util/breakpoint' as *;
+@use '../util/colors' as *;
+@use '../util/functions' as *;
+
+.header {
+	width: 90%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+	margin: rem(25) auto;
+	margin-bottom: rem(230);
+
+	@include breakpoint(desktop) {
+		width: 80%;
+	}
+
+	&__logo {
+		cursor: pointer;
+	}
+
+	&__hamb {
+		cursor: pointer;
+	}
+
+	&__close {
+		display: none;
+		cursor: pointer;
+	}
+
+	&__menu {
+		display: flex;
+		@include breakpoint-down(mobile) {
+			display: none;
+			width: 100%;
+			position: absolute;
+			top: rem(40);
+			flex-direction: column;
+
+			background-color: $white;
+			border-radius: rem(10);
+			box-shadow: 0px 63px 70px rgba(0, 0, 0, 0.07);
+		}
+
+		&__link {
+			padding: rem(20);
+			text-decoration: none;
+			color: $black;
+			font-weight: 500;
+			transform: 0.2s;
+
+			@include breakpoint(desktop) {
+				padding: 0;
+				color: $white;
+				font-weight: 400;
+			}
+
+			&:hover {
+				color: $dark-gray;
+			}
+		}
+
+		:nth-child(2) {
+			border-top: rem(1) solid rgba($dark-gray, 0.4);
+			border-bottom: rem(1) solid rgba($dark-gray, 0.4);
+		}
+
+		@include breakpoint(desktop) {
+			:nth-child(2) {
+				margin: 0 rem(30);
+				border: 0;
+			}
+		}
+	}
+}

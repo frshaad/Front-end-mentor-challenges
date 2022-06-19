@@ -1,0 +1,23 @@
+@use 'index' as *;
+
+.mobile {
+	@include breakpoint(desktop) {
+		display: none;
+	}
+}
+
+.desktop {
+	@include breakpoint-down(mobile) {
+		display: none;
+	}
+}
+
+.container {
+	width: 90%;
+	margin: 0 auto;
+
+	@include breakpoint(desktop) {
+		width: rem(720);
+		max-width: 90%;
+	}
+}
