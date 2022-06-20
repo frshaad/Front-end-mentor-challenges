@@ -41,9 +41,10 @@
 		align-items: center;
 
 		&__back {
-			padding: rem(20) rem(35);
+			padding: rem(20) rem(50);
 
 			text-decoration: none;
+			font-weight: 600;
 			color: $white;
 			background-color: $moderate-cyan;
 			border-radius: rem(50);
@@ -58,14 +59,30 @@
 			cursor: pointer;
 
 			&__icon {
+				@include breakpoint(desktop) {
+					display: none;
+				}
 			}
 
 			&__text {
-				padding: rem(10);
+				position: relative;
+				padding: rem(18) rem(30);
+				padding-left: rem(70);
 
-				background-color: $dark-gray;
+				font-weight: 600;
+				background-color: lighten($dark-gray, 35);
 				border-radius: rem(50);
-				color: $black;
+				color: $dark-gray;
+
+				@include breakpoint-down(mobile) {
+					display: none;
+				}
+
+				&__icon {
+					position: absolute;
+					top: 0;
+					left: 0;
+				}
 			}
 		}
 	}
