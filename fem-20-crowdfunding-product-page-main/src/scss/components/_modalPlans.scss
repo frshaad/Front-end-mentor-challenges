@@ -1,34 +1,77 @@
 @use '../util/breakpoint' as *;
 @use '../util/colors' as *;
 @use '../util/functions' as *;
+@use '../components/section3' as *;
 
 .modal__select {
+	@extend .section3;
+	// display: none;
+	width: 100%;
+
 	&__title {
+		@extend .section3__title;
 	}
+
 	&__desc {
+		@extend .section3__desc;
+		text-align: left;
 	}
-	&__plan {
-		.pledge-radio {
-		}
+
+	&__close {
+		position: absolute;
+		top: rem(25);
+		right: rem(25);
+	}
+
+	.modal__plan {
+		@extend .plans;
+
 		&__content {
 			.head {
-				&__title {
+				display: flex;
+				align-items: center;
+				margin-bottom: rem(20);
+
+				.pledge-radio {
 				}
-				&__price {
-				}
-				&__left {
+
+				&__box {
+					margin-left: rem(20);
+					@include breakpoint(desktop) {
+						display: flex;
+					}
+
+					&__title {
+						margin-right: rem(20);
+						@extend .plans__head__title;
+
+						font-size: rem(16);
+					}
+
+					&__price {
+						@extend .plans__head__price;
+					}
 				}
 			}
+
 			.body {
+				@extend .plans__body;
+			}
+
+			&__left {
+				@extend .plans__bottom__left;
 			}
 		}
-	}
-}
-&__reward {
-	&__text {
-	}
-	&__input {
-	}
-	&__submit {
+
+		.modal__reward {
+			display: none;
+
+			&__text {
+			}
+			&__input {
+			}
+			&__submit {
+			}
+		}
 	}
 }

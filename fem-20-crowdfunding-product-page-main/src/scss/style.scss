@@ -22,4 +22,6 @@
 	}
 }
 
-.modal{}
+.modal {
+	@extend .container;
+}
