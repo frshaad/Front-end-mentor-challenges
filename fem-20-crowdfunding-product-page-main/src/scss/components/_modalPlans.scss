@@ -1,0 +1,34 @@
+@use '../util/breakpoint' as *;
+@use '../util/colors' as *;
+@use '../util/functions' as *;
+
+.modal__select {
+	&__title {
+	}
+	&__desc {
+	}
+	&__plan {
+		.pledge-radio {
+		}
+		&__content {
+			.head {
+				&__title {
+				}
+				&__price {
+				}
+				&__left {
+				}
+			}
+			.body {
+			}
+		}
+	}
+}
+&__reward {
+	&__text {
+	}
+	&__input {
+	}
+	&__submit {
+	}
+}

@@ -1,0 +1,14 @@
+@use '../util/breakpoint' as *;
+@use '../util/colors' as *;
+@use '../util/functions' as *;
+
+.modal__success {
+	&__check {
+	}
+	&__title {
+	}
+	&__desc {
+	}
+	&__btn {
+	}
+}

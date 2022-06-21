@@ -31,7 +31,11 @@
 	.plans {
 		width: 100%;
 		padding: rem(30) rem(25);
-		margin-bottom: rem(25);
+		position: relative;
+
+		&:not(:last-child) {
+			margin-bottom: rem(25);
+		}
 
 		border: rem(1) solid lighten($dark-gray, 40);
 		border-radius: rem(10);
