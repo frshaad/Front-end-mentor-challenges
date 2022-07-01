@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+		<title>Frontend Mentor | Interactive pricing component</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="./dist/style.css" />
+		<script defer src="./dist/all.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<!-- Start of Page title -->
+			<h1 class="title">Simple, traffic-based pricing</h1>
+			<p class="desc desktop">Sign-up for our 30-day trial. No credit card required.</p>
+			<p class="desc mobile">
+				Sign-up for our 30-day trial.<br />
+				No credit card required.
+			</p>
+			<!-- End of Page title -->
+
+			<!-- Start of Main -->
+			<main class="main">
+				<article class="calculator">
+					<div class="calculator__head">
+						<p class="page-view">100k pageviews</p>
+						<div class="price-box desktop">
+							$<span class="price">16.00</span><span>/month</span>
+						</div>
+					</div>
+					<div class="slide-container">
+						<input type="range" min="1" max="32" value="16" class="slider" id="myRange" />
+					</div>
+					<div class="price-box mobile">$<span class="price">16.00</span><span>/month</span></div>
+					<div class="toggle-switch">
+						<span class="toggle-label">Monthly Billing</span>
+						<label class="switch">
+							<input type="checkbox" />
+							<span class="slider round"></span>
+						</label>
+						<span class="toggle-label">
+							Yearly Billing
+							<span class="discount">25%<span class="desktop"> discount</span></span>
+						</span>
+					</div>
+				</article>
+
+				<article class="submit">
+					<ul class="pros">
+						<li class="pros-item">Unlimited websites</li>
+						<li class="pros-item">100% data ownership</li>
+						<li class="pros-item">Email reports</li>
+					</ul>
+
+					<button class="btn">Start my trial</button>
+				</article>
+			</main>
+			<!-- End of Main -->
+		</div>
+	</body>
+</html>
